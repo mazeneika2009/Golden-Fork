@@ -1,0 +1,20 @@
+{
+  "home": "Home",
+  "menu": "Menu",
+  "story": "Our Story",
+  "testimonials": "Testimonials",
+  "book_table": "Book a Table",
+  "hero_title": "Golden Fork",
+  "hero_subtitle": "Experience the taste of luxury",
+  "hero_cta": "View Menu",
+  "menu_title": "Our Menu",
+  "add_to_cart": "Add to Cart",
+  "cart_title": "Your Cart",
+  "cart_empty": "Your cart is empty",
+  "total": "Total",
+  "checkout": "Checkout",
+  "reservation_title": "Reserve a Table",
+  "reserve": "Reserve",
+  "cancel": "Cancel",
+  "rights": "All rights reserved"
+}
