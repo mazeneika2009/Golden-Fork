@@ -1,49 +1,31 @@
 .testimonials {
-  padding: var(--spacing-xl) var(--spacing-sm);
+  padding: var(--spacing-section) 0;
+  background: var(--bg-surface);
+  color: #fff;
   text-align: center;
-  background-color: var(--color-bg);
 }
 
 .testimonial-container {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 var(--spacing-container);
 }
 
 .quote-icon {
-  font-family: var(--font-serif);
   font-size: 4rem;
-  color: var(--color-accent);
+  color: #D4AF37;
   line-height: 1;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 1rem;
 }
 
 blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
   font-style: italic;
-  line-height: 1.6;
-  margin-bottom: var(--spacing-md);
-  color: var(--color-text);
+  margin-bottom: 2rem;
 }
 
 .stars {
-  color: var(--color-accent);
+  color: #D4AF37;
+  margin-bottom: 1rem;
   letter-spacing: 5px;
-  margin-bottom: var(--spacing-sm);
-  font-size: 1.2rem;
-}
-
-cite {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-text-muted);
-  font-style: normal;
-}
-
-@media (min-width: 768px) {
-  blockquote {
-    font-size: 2rem;
-  }
 }
