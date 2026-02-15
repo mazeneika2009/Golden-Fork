@@ -1,16 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Testimonials.css';
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="testimonials">
       <div className="testimonial-container">
         <div className="quote-icon">“</div>
         <blockquote>
-          An absolute masterpiece of dining. The atmosphere, the service, and above all, the food, creates an experience that transcends the ordinary.
+          {t('testimonials.quote')}
         </blockquote>
         <div className="stars">★★★★★</div>
-        <cite>— Jonathan Gold, Food Critic</cite>
+        <cite>{t('testimonials.cite')}</cite>
       </div>
     </section>
   );

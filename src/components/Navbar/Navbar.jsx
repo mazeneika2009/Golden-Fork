@@ -16,13 +16,8 @@ const Navbar = ({ onReserve, cartCount, onOpenCart }) => {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = i18n.language;
-    document.documentElement.dir = i18n.dir(i18n.language);
-  }, [i18n, i18n.language]);
-
-  useEffect(() => {
     if (cartCount === 0) return;
-    setBump(true);
+      setBump(true);
     const timer = setTimeout(() => {
       setBump(false);
     }, 300);
@@ -37,11 +32,11 @@ const Navbar = ({ onReserve, cartCount, onOpenCart }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="logo">{t('hero_title')}</div>
+        <div className="logo">{t('nav.logo')}</div>
         <ul className="nav-links">
-          <li><a href="#menu">{t('menu')}</a></li>
-          <li><a href="#story">{t('story')}</a></li>
-          <li><a href="#contact">{t('testimonials')}</a></li>
+          <li><a href="#menu">{t('nav.menu')}</a></li>
+          <li><a href="#story">{t('nav.story')}</a></li>
+          <li><a href="#contact">{t('nav.contact')}</a></li>
         </ul>
         <div className="nav-buttons">
           <button className="lang-btn" onClick={toggleLanguage}>
@@ -61,9 +56,9 @@ const Navbar = ({ onReserve, cartCount, onOpenCart }) => {
               </svg>
               {cartCount > 0 && <span key={cartCount} className={`cart-badge ${bump ? 'bump' : ''}`}>{cartCount}</span>}
             </div>
-            {t('cart_title')}
+            {t('nav.cart')}
           </button>
-          <button className="reserve-btn" onClick={onReserve}>{t('book_table')}</button>
+          <button className="reserve-btn" onClick={onReserve}>{t('nav.reserve')}</button>
         </div>
       </div>
     </nav>

@@ -1,7 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './CartModal.css';
 
 const CartModal = ({ isOpen, onClose, cartItems, onRemove, onUpdateQuantity }) => {
+  const { t } = useTranslation();
+
   if (!isOpen) return null;
 
   const total = cartItems.reduce((sum, item) => {
@@ -13,9 +16,9 @@ const CartModal = ({ isOpen, onClose, cartItems, onRemove, onUpdateQuantity }) =
     <div className="modal-overlay" onClick={onClose}>
       <div className="cart-modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>&times;</button>
-        <h2>Your Order</h2>
+        <h2>{t('cart.title')}</h2>
         {cartItems.length === 0 ? (
-          <p className="empty-cart">Your cart is empty.</p>
+          <p className="empty-cart">{t('cart.empty')}</p>
         ) : (
           <div className="cart-items">
             {cartItems.map(item => (
@@ -36,10 +39,10 @@ const CartModal = ({ isOpen, onClose, cartItems, onRemove, onUpdateQuantity }) =
         )}
         <div className="cart-footer">
             <div className="cart-total">
-                <span>Total:</span>
+                <span>{t('cart.total')}:</span>
                 <span>${total.toFixed(2)}</span>
             </div>
-            <button className="checkout-btn" disabled={cartItems.length === 0}>Checkout</button>
+            <button className="checkout-btn" disabled={cartItems.length === 0}>{t('cart.checkout')}</button>
         </div>
       </div>
     </div>

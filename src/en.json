@@ -1,20 +1,81 @@
 {
-  "home": "Home",
-  "menu": "Menu",
-  "story": "Our Story",
-  "testimonials": "Testimonials",
-  "book_table": "Book a Table",
-  "hero_title": "Golden Fork",
-  "hero_subtitle": "Experience the taste of luxury",
-  "hero_cta": "View Menu",
-  "menu_title": "Our Menu",
-  "add_to_cart": "Add to Cart",
-  "cart_title": "Your Cart",
-  "cart_empty": "Your cart is empty",
-  "total": "Total",
-  "checkout": "Checkout",
-  "reservation_title": "Reserve a Table",
-  "reserve": "Reserve",
-  "cancel": "Cancel",
-  "rights": "All rights reserved"
+  "nav": {
+    "logo": "GOLDEN FORK",
+    "menu": "Menu",
+    "story": "Our Story",
+    "contact": "Contact",
+    "cart": "Cart",
+    "reserve": "Reserve"
+  },
+  "menuGrid": {
+    "title": "Signature Creations",
+    "all": "All",
+    "appetizers": "Appetizers",
+    "entrees": "Entrées",
+    "desserts": "Desserts",
+    "addToCart": "Add to Cart",
+    "loadMore": "Load More",
+    "loadLess": "Load Less"
+  },
+  "menuItems": {
+    "wagyu_tartare": { "title": "Wagyu Truffle Tartare", "description": "A5 Wagyu beef, black truffle shavings, quail egg yolk, gold leaf." },
+    "lobster_risotto": { "title": "Saffron Lobster Risotto", "description": "Arborio rice, Maine lobster tail, saffron threads, parmesan crisp." },
+    "seared_scallops": { "title": "Golden Seared Scallops", "description": "Pan-seared scallops, cauliflower purée, caviar beurre blanc." },
+    "ossetra_caviar": { "title": "Royal Ossetra Caviar", "description": "Served with buckwheat blinis, crème fraîche, and chives." },
+    "foie_gras": { "title": "Pan-Seared Foie Gras", "description": "Fig jam, toasted brioche, balsamic reduction." },
+    "sea_bass": { "title": "Miso Glazed Chilean Sea Bass", "description": "Bok choy, ginger dashi broth, lotus root chips." },
+    "rack_of_lamb": { "title": "Herb-Crusted Rack of Lamb", "description": "Ratatouille, rosemary jus, mint pesto." },
+    "king_crab": { "title": "Butter Poached King Crab", "description": "Asparagus, lemon beurre blanc, tarragon oil." },
+    "gold_steak": { "title": "24K Gold Leaf Steak", "description": "Filet Mignon, truffle mashed potatoes, gold leaf." },
+    "chocolate_sphere": { "title": "Valrhona Chocolate Sphere", "description": "Warm caramel sauce, hazelnut praline, gold dust." },
+    "yuzu_tart": { "title": "Yuzu Lemon Tart", "description": "Meringue clouds, raspberry coulis, candied zest." },
+    "tiramisu": { "title": "Gold Leaf Tiramisu", "description": "Mascarpone cream, espresso-soaked ladyfingers, 24k gold." }
+  },
+  "story": {
+    "subtitle": "Our Heritage",
+    "title": "A Legacy of <1>Excellence</1>",
+    "p1": "Founded in 1998, Golden Fork began with a singular vision: to create a dining experience that transcends the ordinary. What started as a humble passion for authentic flavors has evolved into a sanctuary for culinary artistry.",
+    "p2": "Our chefs meticulously source the finest ingredients from around the globe, ensuring that every plate served is a testament to quality and innovation. We believe that food is not just sustenance, but a journey of the senses.",
+    "signature": "Chef Alexander Sterling",
+    "imageAlt": "Chef plating a dish"
+  },
+  "testimonials": {
+    "quote": "An absolute masterpiece of dining. The atmosphere, the service, and above all, the food, creates an experience that transcends the ordinary.",
+    "cite": "— Jonathan Gold, Food Critic"
+  },
+  "footer": {
+    "brand": "Golden Fork",
+    "tagline": "Luxury Dining Experience",
+    "contactTitle": "Contact",
+    "address": "123 Culinary Ave, New York, NY",
+    "email": "reservations@goldenfork.com",
+    "hoursTitle": "Hours",
+    "hours": "Mon-Sun: 5pm - 11pm",
+    "happyHour": "Happy Hour: 5pm - 7pm",
+    "copyright": "© 2024 Golden Fork. All rights reserved."
+  },
+  "reservation": {
+    "title": "Reserve a Table",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Number of Guests",
+    "confirm": "Confirm Reservation",
+    "successMessage": "Thank you! Your reservation request has been received."
+  },
+  "cart": {
+    "title": "Your Order",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "hero": {
+    "badge": "EST. 2026",
+    "title": "Taste the <1/> <2>Extraordinary</2>",
+    "description": "Experience culinary perfection where tradition meets innovation. Every dish tells a story of passion, flavor, and elegance.",
+    "cta": "View Menu",
+    "imageAlt": "Signature Dish"
+  }
 }
