@@ -8,7 +8,7 @@ const MENU_ITEMS = [
   { id: 'seared_scallops', category: 'appetizers', price: '$38', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=600&auto=format&fit=crop' },
   { id: 'ossetra_caviar', category: 'appetizers', price: '$120', image: 'https://images.unsplash.com/photo-1555126634-323283e090fa?q=80&w=600&auto=format&fit=crop' },
   { id: 'foie_gras', category: 'appetizers', price: '$42', image: 'https://images.unsplash.com/photo-1608835291093-394b0c943a75?q=80&w=600&auto=format&fit=crop' },
-  { id: 'sea_bass', category: 'entrees', price: '$48', image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a3a277d?auto=format&fit=crop&w=500&q=60' },
+  { id: 'sea_bass', category: 'entrees', price: '$48', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=600&auto=format&fit=crop' },
   { id: 'rack_of_lamb', category: 'entrees', price: '$52', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=600&auto=format&fit=crop' },
   { id: 'king_crab', category: 'entrees', price: '$65', image: 'https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=600&auto=format&fit=crop' },
   { id: 'gold_steak', category: 'entrees', price: '$250', image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?q=80&w=600&auto=format&fit=crop' },
