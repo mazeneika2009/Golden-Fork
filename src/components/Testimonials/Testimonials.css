@@ -1,31 +1,100 @@
 .testimonials {
-  padding: var(--spacing-section) 0;
-  background: var(--bg-surface);
-  color: #fff;
-  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  perspective: 1000px; /* Essential for 3D flip effect */
 }
 
-.testimonial-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-container);
+.testimonial-card {
+  background: #111;
+  border: 1px solid #d4af37;
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* Default state: transition back to 0deg */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip Animation State */
+.testimonial-card.flipping {
+  transform: rotateY(90deg) scale(0.95);
+  opacity: 0.5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Going into the flip: transition to 90deg */
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, box-shadow 0.3s ease;
 }
 
 .quote-icon {
   font-size: 4rem;
-  color: #D4AF37;
+  color: #d4af37;
   line-height: 1;
   margin-bottom: 1rem;
+  font-family: serif;
 }
 
 blockquote {
-  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  font-size: 1.2rem;
+  color: #e0e0e0;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .stars {
-  color: #D4AF37;
-  margin-bottom: 1rem;
-  letter-spacing: 5px;
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.customer-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d4af37;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+cite {
+  display: block;
+  font-style: normal;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.role {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  blockquote {
+    font-size: 1rem;
+  }
 }

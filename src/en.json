@@ -40,8 +40,21 @@
     "imageAlt": "Chef plating a dish"
   },
   "testimonials": {
-    "quote": "An absolute masterpiece of dining. The atmosphere, the service, and above all, the food, creates an experience that transcends the ordinary.",
-    "cite": "— Jonathan Gold, Food Critic"
+    "1": {
+      "text": "An absolute masterpiece of dining. The atmosphere, the service, and above all, the food, creates an experience that transcends the ordinary.",
+      "name": "Jonathan Gold",
+      "role": "Food Critic"
+    },
+    "2": {
+      "text": "The wine pairing was exquisite. Each sip complemented the dishes perfectly. A truly magical evening.",
+      "name": "Isabella Rossi",
+      "role": "Sommelier"
+    },
+    "3": {
+      "text": "As a chef myself, I am blown away by the attention to detail. The Wagyu Tartare is simply world-class.",
+      "name": "Alexander Chen",
+      "role": "Executive Chef"
+    }
   },
   "footer": {
     "brand": "Golden Fork",
