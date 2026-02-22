@@ -1,0 +1,239 @@
+/* =================================
+   Professional Style Overhaul
+   ================================= */
+
+:root {
+  --color-primary: #d69e2e; /* Golden yellow */
+  --color-primary-light: #fffaf0;
+  --color-primary-dark: #b7791f;
+  --color-success: #28a745; /* Green */
+  --color-success-dark: #218838;
+  --color-text-dark: #2d3748;
+  --color-text-medium: #4a5568;
+  --color-text-light: #718096;
+  --color-bg-main: #f8f9fa;
+  --color-bg-card: #ffffff;
+  --color-border: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --border-radius: 0.5rem;
+}
+
+.cashier-dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-bg-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Sidebar --- */
+.cashier-sidebar {
+  width: 16rem;
+  background-color: var(--color-bg-card);
+  border-right: 1px solid var(--color-border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+
+.cashier-sidebar h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+  letter-spacing: -0.025em;
+}
+
+.cashier-sidebar nav {
+  flex: 1;
+}
+
+.cashier-sidebar nav > *:not(:last-child) {
+  margin-top: 0.5rem; /* space-y-2 */
+}
+
+.sidebar-button-active, .sidebar-link {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-button-active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+.sidebar-link {
+  display: block;
+  color: var(--color-text-medium);
+  background-color: transparent;
+}
+
+.sidebar-link:hover, .sidebar-button-active:hover {
+  background-color: #f1f5f9;
+  color: var(--color-text-dark);
+}
+
+/* --- Main Content --- */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  height: 100%;
+}
+
+.menu-grid-container, .current-order-container {
+  background-color: var(--color-bg-card);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-grid-container h2, .current-order-container h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.menu-item {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-primary);
+}
+
+.menu-item-name {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.menu-item-price {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+/* --- Current Order Panel --- */
+.order-items-list {
+  flex: 1;
+  margin-bottom: 1.5rem;
+  overflow-y: auto;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px dashed var(--color-border);
+  color: var(--color-text-dark);
+}
+
+.order-item-name {
+  font-weight: 600;
+}
+
+.order-item-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.delete-item-button {
+  background: transparent;
+  border: none;
+  color: #e53e3e;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.delete-item-button:hover {
+  background-color: #fff5f5;
+}
+
+.no-items-text {
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 4rem;
+  font-style: italic;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-bg-main);
+}
+
+.total-container span:first-child {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-medium);
+}
+
+.checkout-button {
+  width: 100%;
+  background-color: var(--color-success);
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.checkout-button:hover {
+  background-color: var(--color-success-dark);
+}
+
+.checkout-button:active {
+  transform: scale(0.98);
+}

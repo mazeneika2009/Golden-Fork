@@ -1,0 +1,220 @@
+:root {
+  --color-primary: #d69e2e;
+  --color-text-dark: #2d3748;
+  --color-text-medium: #4a5568;
+  --color-text-light: #718096;
+  --color-bg-main: #f8f9fa;
+  --color-bg-card: #ffffff;
+  --color-border: #e2e8f0;
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --border-radius: 0.5rem;
+}
+
+.subpage-container {
+  padding: 2rem;
+  background-color: var(--color-bg-main);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.back-link-container {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-medium);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.subpage-container h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+  letter-spacing: -0.025em;
+}
+
+.content-box {
+  background-color: var(--color-bg-card);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.filter-controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+}
+
+.filter-controls button {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  color: var(--color-text-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-controls button:hover {
+  background-color: #f1f5f9;
+  color: var(--color-text-dark);
+}
+
+.filter-controls button.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.transaction-table th,
+.transaction-table td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-dark);
+}
+
+.transaction-table th {
+  font-weight: 600;
+  color: var(--color-text-medium);
+  background-color: var(--color-bg-main);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.completed {
+  background-color: #def7ec;
+  color: #03543f;
+}
+
+.status-badge.refunded {
+  background-color: #fde8e8;
+  color: #9b1c1c;
+}
+
+/* Menu Management Form */
+.menu-form-container {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menu-form-container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark);
+}
+
+.menu-form .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.menu-form .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-text-medium);
+}
+
+.menu-form input,
+.menu-form select {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.form-submit-btn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #b7791f; /* --color-primary-dark */
+}
+
+/* Action Buttons in Table */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.action-btn {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.action-btn.edit {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.action-btn.edit:hover {
+  background-color: #c7d2fe;
+}
+
+.action-btn.delete {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.action-btn.delete:hover {
+  background-color: #fecaca;
+}

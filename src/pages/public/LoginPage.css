@@ -1,0 +1,55 @@
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7fafc; /* bg-gray-100 */
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 2rem; /* p-8 */
+  border-radius: 0.25rem; /* rounded */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+  width: 24rem; /* w-96 */
+}
+
+.login-form h1 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-align: center;
+}
+
+.login-form .form-group {
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-weight: 500; /* font-medium */
+}
+
+.login-form select {
+  width: 100%;
+  padding: 0.5rem; /* p-2 */
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 0.25rem; /* rounded */
+}
+
+.login-form button {
+  width: 100%;
+  background-color: #ecc94b; /* bg-yellow-500 */
+  color: #fff;
+  padding: 0.5rem 0;
+  border-radius: 0.25rem; /* rounded */
+  transition-property: background-color;
+  transition-duration: 150ms;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #d69e2e; /* hover:bg-yellow-600 */
+}

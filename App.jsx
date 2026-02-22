@@ -1,38 +1,46 @@
-import React, { useState } from 'react';
-import './i18n';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import MenuGrid from './components/MenuGrid/MenuGrid';
-import Testimonials from './components/Testimonials/Testimonials';
-import Story from './components/Story/Story';
-import Footer from './components/Footer/Footer';
-import ReservationModal from './components/ReservationModal/ReservationModal';
-import RevealOnScroll from './components/RevealOnScroll/RevealOnScroll';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './src/i18n';
+
+// Public Pages
+import HomePage from './src/pages/public/HomePage';
+import LoginPage from './src/pages/public/LoginPage';
+import NotFoundPage from './src/pages/public/NotFoundPage';
+
+// Admin Pages
+import AdminDashboard from './src/pages/admin/AdminDashboard';
+import ManageMenu from './src/pages/admin/ManageMenu';
+import AllOrders from './src/pages/admin/AllOrders';
+
+// Kitchen Pages
+import KitchenDisplay from './src/pages/Kitchen/KitchenDisplay';
+
+// Cashier Pages
+import CashierDashboard from './src/pages/Cashier/CashierDashboard';
+import TransactionHistory from './src/pages/Cashier/TransactionHistory';
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
-    <div className="app-container">
-      <Navbar onReserve={() => setIsModalOpen(true)} />
-      <main>
-        <Hero />
-        <RevealOnScroll>
-          <MenuGrid />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <Story />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <Testimonials />
-        </RevealOnScroll>
-      </main>
-      <ReservationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <RevealOnScroll>
-        <Footer />
-      </RevealOnScroll>
-    </div>
+    <Routes>
+      {/* Public Routes */}
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+
+      {/* Admin Routes */}
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/menu" element={<ManageMenu />} />
+      <Route path="/admin/orders" element={<AllOrders />} />
+
+      {/* Kitchen Routes */}
+      <Route path="/kitchen" element={<KitchenDisplay />} />
+
+      {/* Cashier Routes */}
+      <Route path="/cashier" element={<CashierDashboard />} />
+      <Route path="/cashier/history" element={<TransactionHistory />} />
+
+      {/* Fallback Route */}
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
