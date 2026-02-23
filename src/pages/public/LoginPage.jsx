@@ -21,7 +21,7 @@ export default function LoginPage() {
       <form onSubmit={handleLogin} className="login-form">
         <h1>Login</h1>
         <div className="form-group">
-          <label>Select Role (Demo)</label>
+          <label>Select Role </label>
           <select 
             value={role} 
             onChange={(e) => setRole(e.target.value)}

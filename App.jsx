@@ -5,7 +5,6 @@ import './src/i18n';
 // Public Pages
 import HomePage from './src/pages/public/HomePage';
 import LoginPage from './src/pages/public/LoginPage';
-import NotFoundPage from './src/pages/public/NotFoundPage';
 
 // Admin Pages
 import AdminDashboard from './src/pages/admin/AdminDashboard';
@@ -38,8 +37,7 @@ function App() {
       <Route path="/cashier" element={<CashierDashboard />} />
       <Route path="/cashier/history" element={<TransactionHistory />} />
 
-      {/* Fallback Route */}
-      <Route path="*" element={<NotFoundPage />} />
+    
     </Routes>
   );
 }
