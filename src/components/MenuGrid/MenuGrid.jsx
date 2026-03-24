@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useCart } from '../../CartContext';
 import './MenuGrid.css';
 
 const MENU_ITEMS = [
@@ -17,10 +18,12 @@ const MENU_ITEMS = [
   { id: 'tiramisu', category: 'desserts', price: '$22', image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600&auto=format&fit=crop' }
 ];
 
-const MenuGrid = ({ addToCart }) => {
+const MenuGrid = () => {
   const { t } = useTranslation();
+  const { addToCart } = useCart();
   const [filter, setFilter] = useState('all');
   const [visibleItems, setVisibleItems] = useState(6);
+  const [addedItems, setAddedItems] = useState({});
 
   const filteredItems = filter === 'all' 
     ? MENU_ITEMS 
@@ -32,6 +35,20 @@ const MenuGrid = ({ addToCart }) => {
 
   const handleLoadLess = () => {
     setVisibleItems(6);
+  };
+
+  const handleAddToCart = (item) => {
+    addToCart({
+      id: item.id,
+      title: t(`menuItems.${item.id}.title`),
+      price: parseFloat(item.price.replace('$', '')),
+      quantity: 1
+    });
+
+    setAddedItems((prev) => ({ ...prev, [item.id]: true }));
+    setTimeout(() => {
+      setAddedItems((prev) => ({ ...prev, [item.id]: false }));
+    }, 1500);
   };
 
   return (
@@ -67,15 +84,11 @@ const MenuGrid = ({ addToCart }) => {
                 </div>
                 <p className="description">{t(`menuItems.${item.id}.description`)}</p>
                 <button 
-                  className="add-cart-btn"
-                  onClick={() => addToCart({
-                    id: item.id,
-                    title: t(`menuItems.${item.id}.title`),
-                    price: item.price,
-                    quantity: 1
-                  })}
+                  className={`add-cart-btn ${addedItems[item.id] ? 'added' : ''}`}
+                  onClick={() => handleAddToCart(item)}
+                  disabled={addedItems[item.id]}
                 >
-                  {t('menuGrid.addToCart')}
+                  {addedItems[item.id] ? (t('menuGrid.added') || 'Added') : t('menuGrid.addToCart')}
                 </button>
               </div>
             </div>

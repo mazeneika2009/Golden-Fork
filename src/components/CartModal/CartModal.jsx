@@ -1,21 +1,28 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useCart } from '../../CartContext';
 import './CartModal.css';
 
-const CartModal = ({ isOpen, onClose, cartItems, onRemove, onUpdateQuantity }) => {
+const CartModal = () => {
   const { t } = useTranslation();
+  const {
+    isCartOpen,
+    closeCart,
+    cartItems,
+    removeFromCart,
+    updateQuantity,
+  } = useCart();
 
-  if (!isOpen) return null;
+  if (!isCartOpen) return null;
 
   const total = cartItems.reduce((sum, item) => {
-    const price = parseFloat(item.price.replace('$', ''));
-    return sum + price * item.quantity;
+    return sum + item.price * item.quantity;
   }, 0);
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={closeCart}>
       <div className="cart-modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>&times;</button>
+        <button className="modal-close" onClick={closeCart}>&times;</button>
         <h2>{t('cart.title')}</h2>
         {cartItems.length === 0 ? (
           <p className="empty-cart">{t('cart.empty')}</p>
@@ -25,14 +32,14 @@ const CartModal = ({ isOpen, onClose, cartItems, onRemove, onUpdateQuantity }) =
               <div key={item.id} className="cart-item">
                 <div className="cart-item-info">
                   <h4>{item.title}</h4>
-                  <p>{item.price}</p>
+                  <p>${item.price.toFixed(2)}</p>
                 </div>
                 <div className="cart-item-controls">
-                  <button onClick={() => onUpdateQuantity(item.id, -1)}>-</button>
+                  <button onClick={() => updateQuantity(item.id, -1)}>-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => onUpdateQuantity(item.id, 1)}>+</button>
+                  <button onClick={() => updateQuantity(item.id, 1)}>+</button>
                 </div>
-                <button className="remove-btn" onClick={() => onRemove(item.id)}>&times;</button>
+                <button className="remove-btn" onClick={() => removeFromCart(item.id)}>&times;</button>
               </div>
             ))}
           </div>

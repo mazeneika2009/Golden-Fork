@@ -5,6 +5,13 @@ import './Hero.css';
 const Hero = () => {
   const { t } = useTranslation();
 
+  const scrollToMenu = () => {
+    const menuSection = document.getElementById('menu');
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -18,7 +25,7 @@ const Hero = () => {
           <p>
             {t('hero.description')}
           </p>
-          <button className="cta-btn">{t('hero.cta')}</button>
+          <button className="cta-btn" onClick={scrollToMenu}>{t('hero.cta')}</button>
         </div>
         <div className="hero-image-wrapper">
           <div className="gold-frame"></div>
