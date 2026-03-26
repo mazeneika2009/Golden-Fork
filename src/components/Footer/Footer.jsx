@@ -27,6 +27,9 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>{t('footer.copyright')}</p>
+        <Link to="/login" className="staff-login-link">
+          {t('footer.staffLogin')}
+        </Link>
       </div>
     </footer>
   );

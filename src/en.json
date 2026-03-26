@@ -66,6 +66,7 @@
     "phone": "01094332602",
     "hours": "Mon-Sun: 5pm - 11pm",
     "happyHour": "Happy Hour: 5pm - 7pm",
+      "staffLogin": "Staff Login",
     "copyright": "© 2024 Golden Fork. All rights reserved."
   },
   "reservation": {
@@ -91,5 +92,9 @@
     "description": "Experience culinary perfection where tradition meets innovation. Every dish tells a story of passion, flavor, and elegance.",
     "cta": "View Menu",
     "imageAlt": "Signature Dish"
+  },
+  "login": {
+    "placeholder": "Enter Access Code",
+    "error": "Invalid access code. Please try again."
   }
 }
