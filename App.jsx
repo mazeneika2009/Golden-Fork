@@ -15,8 +15,8 @@ import AllOrders from './src/pages/admin/AllOrders';
 import KitchenDisplay from './src/pages/Kitchen/KitchenDisplay';
 
 // Cashier Pages
-import CashierDashboard from './src/pages/Cashier/CashierDashboard';
-import TransactionHistory from './src/pages/Cashier/TransactionHistory';
+import CashierDashboard from './src/pages/cashier/CashierDashboard.jsx';
+import TransactionHistory from './src/pages/cashier/TransactionHistory';
 
 function App() {
   return (
